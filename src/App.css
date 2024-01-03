@@ -57,7 +57,7 @@ html, body {
 
 #button-container {
   /* display: flex; */
-  justify-content: space-between; /* or center, or flex-start, etc. depending on your layout needs */
+  justify-content: space-evenly; /* or center, or flex-start, etc. depending on your layout needs */
 }
 
 #quote-box button {

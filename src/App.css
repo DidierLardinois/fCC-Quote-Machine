@@ -67,7 +67,7 @@ html, body {
   background-color: #4caf50; /* darken the button color when hovered */
 }
 
-#quote-box .tweet-symbol {
+.fab fa-twitter {
   color: #1da1f2; /* Twitter's brand color */
   font-size: 2rem; /* make the symbol larger */
 }

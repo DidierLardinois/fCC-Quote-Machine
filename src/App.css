@@ -35,9 +35,8 @@
   background-color: rgb(240, 237, 237);;
   border-radius: 5px;
   padding: 20px;
-  width: 33%;
-  height: 200px; /* or any other value */
-  overflow: auto; /* add a scrollbar if the content is too large */
+  width: 75%;
+  height: 250px; /* or any other value */
   margin: 2rem auto;
 }
 

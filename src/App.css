@@ -44,16 +44,21 @@ html, body {
   border-radius: 15px;
   padding: 20px;
   width: 500px;
-  min-height: 10rem;
+  height: 10rem;
+  overflow: auto;
   margin: 2rem auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+#new-quote {
+  margin-right: 10px; /* add this line */
+}
+
 #button-container {
   display: flex;
-  justify-content: center; /* or center, or flex-start, etc. depending on your layout needs */
+  justify-content: space-between; /* or center, or flex-start, etc. depending on your layout needs */
 }
 
 #quote-box button {

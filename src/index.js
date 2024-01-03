@@ -49,17 +49,15 @@ function QuoteMachine() {
     };
   }, [fetchQuote]);  // Add fetchQuote to the dependencies array
 
-  // Rest of your component
+  return (
+    <div id="quote-box">
+      <p id="text">{quote}</p>
+      <p id="author">{author}</p>
+      <button id="new-quote" onClick={fetchQuote}>New quote</button>
+      <a id="tweet-quote" href="twitter.com/intent/tweet">Tweet Quote</a>
+    </div>
+  );
 }
-
-return (
-  <div id="quote-box">
-    <p id="text">{quote}</p>
-    <p id="author">{author}</p>
-    <button id="new-quote" onClick={fetchQuote}>New quote</button>
-    <a id="tweet-quote" href="twitter.com/intent/tweet">Tweet Quote</a>
-  </div>
-);
 
 export default QuoteMachine;
 

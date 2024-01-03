@@ -24,15 +24,7 @@ function QuoteMachine() {
   const [author, setAuthor] = useState('');
 
 
-  useEffect(() => {
-    const intervalId = setInterval(fetchQuote, 5000);  // Change quotes every 5 seconds
-
-    return () => {
-      clearInterval(intervalId);  // Clean up on unmount
-    };
-  }, [fetchQuote]);  // Add fetchQuote to the dependencies array
-
-  const fetchQuote = () => {
+  const fetchQuote = useCallback(() => {
     if (remainingIndices.length === 0) {
       // All quotes have been shown, reset remainingIndices
       setRemainingIndices(Array.from({ length: quotes.length }, (_, i) => i));
@@ -47,16 +39,27 @@ function QuoteMachine() {
 
     // Remove the shown index from remainingIndices
     setRemainingIndices(remainingIndices.filter(i => i !== quoteIndex));
-  };
+  }, [remainingIndices, setRemainingIndices, setQuote, setAuthor]);
 
-  return (
-    <div id="quote-box">
-      <p id="text">{quote}</p>
-      <p id="author">{author}</p>
-      <button id="new-quote" onClick={fetchQuote}>New quote</button>
-      <a id="tweet-quote" href="twitter.com/intent/tweet">Tweet Quote</a>
-    </div>
-  );
+  useEffect(() => {
+    const intervalId = setInterval(fetchQuote, 5000);  // Change quotes every 5 seconds
+
+    return () => {
+      clearInterval(intervalId);  // Clean up on unmount
+    };
+  }, [fetchQuote]);  // Add fetchQuote to the dependencies array
+
+  // Rest of your component
 }
+
+return (
+  <div id="quote-box">
+    <p id="text">{quote}</p>
+    <p id="author">{author}</p>
+    <button id="new-quote" onClick={fetchQuote}>New quote</button>
+    <a id="tweet-quote" href="twitter.com/intent/tweet">Tweet Quote</a>
+  </div>
+);
+
 export default QuoteMachine;
 

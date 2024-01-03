@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import React, { useState, useEffect } from 'react'; // Import useState and useEffect
+import React, { useState, useEffect, useCallback } from 'react'; // Import useState, useEffect and useCallback hooks
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';

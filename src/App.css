@@ -36,8 +36,11 @@
   border-radius: 15px;
   padding: 20px;
   width: 500px;
-  min-height: 250px;
+  min-height: 10rem;
   margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #quote-box button {
@@ -45,6 +48,7 @@
   color: #282c34; /* dark text for contrast */
   border: none;
   border-radius: 15px;
+  margin: 0 auto;
   padding: 10px 10px;
   font-size: 1rem;
   cursor: pointer;

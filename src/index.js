@@ -54,7 +54,7 @@ function QuoteMachine() {
       <p id="text">{quote}</p>
       <p id="author">{author}</p>
       <button id="new-quote" onClick={fetchQuote}>New quote</button>
-      <a id="tweet-quote" href="twitter.com/intent/tweet">Tweet Quote</a>
+      <a id="tweet-quote" href="twitter.com/intent/tweet"><i class="fab fa-twitter"></i></a>
     </div>
   );
 }

@@ -51,6 +51,11 @@ html, body {
   justify-content: space-between;
 }
 
+#button-container {
+  display: flex;
+  justify-content: space-between; /* or center, or flex-start, etc. depending on your layout needs */
+}
+
 #quote-box button {
   background-color: #61dafb; /* same color as .App-link */
   color: #282c34; /* dark text for contrast */
